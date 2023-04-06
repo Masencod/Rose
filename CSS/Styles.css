@@ -15,7 +15,10 @@
 }
 h1 {
     font-size: 2rem;
-    color: #012B54;
+    color: #012B55;
+}
+.header--text {
+    text-decoration: none;
 }
 .container {
     width: 100%;
@@ -27,6 +30,9 @@ h1 {
 .menu {
     border: none;
     background-color: white;
+}
+.burger {
+    color: #012B55;
 }
 .navbar {
     width: 100%;
@@ -42,19 +48,21 @@ h1 {
     flex-direction: column;
     background-color: #F7F8F9;
     padding: 40px 0px;
+    font-variation-settings: 'wght' 700;
+    margin-bottom: 5px;
 }
 .bio-toptext {
     text-align: center;
-    width: 60%;
-    padding-top: 20px;
+    width: 75%;
+    padding-top: 0px;
 }
 .bio-text {
-    font-size: 1.375rem;
-    color: #001a33;
+    font-size: 1.275rem;
+    color: #012B55;
 }
 .scroll-text {
     font-size: 1.4rem;
-    color: #3d4c5a;
+    color: #597188;
 }
 .bio-bottext {
     padding-top: 20px;
@@ -164,7 +172,19 @@ h1 {
     background-color: #4244462f;
 }
 @media screen and (min-width: 600px) and (max-width: 900px) {
+    .pf-container{
+        flex-direction: row;
+        flex-wrap: wrap;
 
+    }
+    .card:nth-child(2n+1) {
+        width: 50%;
+        padding-right: 5px;
+    }
+    .card:nth-child(2n) {
+        width: 50%;
+        padding-left: 5px;
+    }
 }
 @media screen and (min-width: 900px) {
     .arrow {
