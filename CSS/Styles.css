@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-size: 10px;
     font-family: 'El Messiri', sans-serif;
+    scroll-behavior: smooth;
 }
 .material-symbols-outlined {
     font-variation-settings:
@@ -32,26 +33,34 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 15px;
+    padding: 30px 20px;
 }
 .bio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #F7F8F9;
+    padding: 40px 0px;
+}
+.bio-toptext {
     text-align: center;
     width: 60%;
     padding-top: 20px;
 }
 .bio-text {
-    font-size: 1.4rem;
+    font-size: 1.375rem;
     color: #001a33;
 }
 .scroll-text {
     font-size: 1.4rem;
     color: #3d4c5a;
 }
-.scroll {
+.bio-bottext {
     padding-top: 20px;
 }
 .pf-container {
-    padding-top: 50px;
+    padding-top: 0px;
 }
 .images {
     width: 100%;
@@ -81,7 +90,7 @@ h1 {
     transition: all 0.2s ease;
 }
 .img1:hover {
-    opacity: 35%;
+    opacity: 30%;
 }
 .img1:hover ~ .pic1-text{
     display: block;
@@ -111,8 +120,8 @@ h1 {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background-color: #E6EAEE;
-    transition: 0.2s ease;
+    background-color: rgba(1, 43, 85, 0.1);
+    transition: 0.3s ease;
 }
 .icon-background:hover {
     background-color: #d1d6db;
@@ -136,4 +145,29 @@ h1 {
     font-size: 1.5rem;
     color: #8295A6;
     text-decoration: none;
+}
+.arrow {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #012B55;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgba(1, 43, 85, 0.1);
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+.arrow:hover {
+    background-color: #4244462f;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+
+}
+@media screen and (min-width: 900px) {
+    .arrow {
+        display: flex;
+    }
 }
