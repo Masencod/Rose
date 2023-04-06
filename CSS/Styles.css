@@ -17,7 +17,7 @@ h1 {
     font-size: 2rem;
     color: #012B55;
 }
-.header--text {
+.headertext {
     text-decoration: none;
 }
 .container {
@@ -28,11 +28,19 @@ h1 {
     align-items: center;
 }
 .menu {
-    border: none;
-    background-color: white;
+    cursor: pointer;
 }
 .burger {
     color: #012B55;
+}
+.clsbtn {
+    color: #012B55;
+    display: none;
+}
+.containerright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .navbar {
     width: 100%;
@@ -50,6 +58,7 @@ h1 {
     padding: 40px 0px;
     font-variation-settings: 'wght' 700;
     margin-bottom: 5px;
+    line-height: 16px;
 }
 .bio-toptext {
     text-align: center;
@@ -108,7 +117,7 @@ h1 {
     font-size: 1.5rem;
 }
 .production {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
 }
 .pf-container {
     display: flex;
@@ -171,11 +180,86 @@ h1 {
 .arrow:hover {
     background-color: #4244462f;
 }
+.nav {
+    display: none;
+}
+.link {
+    text-decoration: none;
+    color: rgb(65, 87, 109);
+    transition: 0.2 ease;
+    font-size: 1.46rem;
+    line-height: 20px;
+}
+.list {
+    list-style-type: none;
+    padding-top: 10px;
+}
+.work {
+    color: #012B55;
+    font-variation-settings: 'wght' 700;
+    font-size: 1.55rem;
+}
+.link:hover {
+    color: #012B55;
+}
+.contact {
+    padding-top: 25px;
+}
+.nav__contact {
+    padding-top: 20px;
+}
+@media screen and (max-width: 600px) {
+    .containerright.active {
+        display: none;
+    }
+    .burger.active {
+        display: none;
+    }
+    .clsbtn.active {
+        display: inline-block;
+    }
+    .nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        line-height: 32px;
+        min-height: 85vh;
+    }
+    .navbar.active {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .headertext.active {
+        display: none;
+    }
+    .nav__contact.active {
+        position: fixed;
+        justify-content: center;
+        width: 100%;
+        background-color: white;
+        bottom: -45px;
+        padding-bottom: 40px;
+        left: 50%;
+        column-gap: 20px;
+        transform: translate(-50%, -50%);
+        border-top: 1px solid rgba(0, 0, 0, 0.08)
+    }
+    .menu.active {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+}
 @media screen and (min-width: 600px) and (max-width: 900px) {
     .pf-container{
         flex-direction: row;
         flex-wrap: wrap;
-
+    }
+    .bio-text {
+        font-size: 1.475rem;
     }
     .card:nth-child(2n+1) {
         width: 50%;
@@ -187,7 +271,87 @@ h1 {
     }
 }
 @media screen and (min-width: 900px) {
+    .nav {
+        display: block;
+    }
     .arrow {
         display: flex;
+    }
+    body {
+        margin: 0px 4%;
+    }
+    .pf-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .bio {
+        padding: 110px 0px 140px 0px;
+        line-height: 32px;
+    }
+    .bio-text {
+        font-size: 2.675rem;
+        font-variation-settings: 'wght' 500;
+    }
+    .scroll-text {
+        font-size: 1.7rem;
+    }
+    .card:nth-child(2n+1) {
+        width: 50%;
+        padding-right: 5px;
+    }
+    .card:nth-child(2n) {
+        width: 50%;
+        padding-left: 5px;
+    }
+    .container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .navbar {
+        min-width: 20%;
+        margin-right: 5%;
+        padding: 30px 4px 0px 0px;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .headertext {
+        padding-bottom: 40px;
+    }
+    .menu {
+        display: none;
+    }
+    .icons-container {
+        padding-top: 60px;
+    }
+    .ender {
+        padding-bottom: 50px;
+    }
+    .link {
+        text-decoration: none;
+        color: rgb(65, 87, 109);
+        transition: 0.2 ease;
+        font-size: 1.46rem;
+        line-height: 20px;
+    }
+    .list {
+        list-style-type: none;
+        padding-top: 10px;
+    }
+    .work {
+        color: #012B55;
+        font-variation-settings: 'wght' 700;
+        font-size: 1.55rem;
+    }
+    .link:hover {
+        color: #012B55;
+    }
+    .contact {
+        padding-top: 25px;
+    }
+    .nav__contact {
+        padding-top: 20px;
     }
 }
