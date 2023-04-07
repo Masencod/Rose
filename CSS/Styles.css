@@ -208,7 +208,7 @@ h1 {
 .nav__contact {
     padding-top: 20px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     .containerright.active {
         display: none;
     }
